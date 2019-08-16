@@ -8,6 +8,7 @@ alias ll='ls -lG'
 export CLICOLORS=1
 export LSCOLORS=Fxgxcxdxcxegedabagacad
 
+echo "Welcome to Hannah's Terminal"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
