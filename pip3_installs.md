@@ -1,0 +1,10 @@
+certifi==2019.6.16
+chardet==3.0.4
+ffmpeg==1.4
+hvac==0.9.5
+idna==2.8
+pyminifier==2.1
+requests==2.22.0
+urllib3==1.25.3
+virtualenv==16.7.2
+youtube-dl==2019.8.13
