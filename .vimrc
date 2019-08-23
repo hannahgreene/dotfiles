@@ -11,7 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'fatih/vim-go'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 " Plugin 'YouCompleteMe'
 " <============================================>
 " Specify the plugins you want to install here.
@@ -41,8 +41,15 @@ syntax on
 colo one
 set background=dark
 
+syntax enable
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 ":inoremap ( ()<Esc>:let leavechar=")"<CR>i
 ":inoremap ( ()<Esc>i
 ":inoremap { {}<Esc>i
 ":inoremap [ []<Esc>i
 :inoremap " ""<Esc>i
+:set cursorline

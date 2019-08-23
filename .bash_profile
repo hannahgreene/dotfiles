@@ -20,3 +20,6 @@ export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_br
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 export PATH
+
+
+alias py='python3'
