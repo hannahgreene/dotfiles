@@ -11,8 +11,6 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-source ~/Code/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
