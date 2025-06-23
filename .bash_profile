@@ -1,25 +1,30 @@
+if command -v pyenv 1>/dev/null 2>&1; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 
-set term=builtin_ansi
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-alias aws-whoami="aws sts get-caller-identity"
-alias ls='ls -GFh'
-alias ll='ls -lG'
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-export CLICOLORS=1
-export LSCOLORS=Fxgxcxdxcxegedabagacad
+source ~/Code/zendesk/kubectl_config/dotfiles/kubectl_stuff.bash
 
-echo "Welcome to Hannah's Terminal"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
-parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+complete -C '/opt/homebrew/bin/aws_completer' aws
+
+# Function to get the current Git branch
+git_branch() {
+  git branch 2>/dev/null | grep '*' | sed 's/* //'
 }
-export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]\[\033[m\]\$ "
 
+export PS1="→  \[\033[38;5;208m\]\u\[\033[38;5;15m\]:\[\033[38;5;39m\]\w\[\033[38;5;15m\]\[\033[38;5;45m\] (\$(git_branch))\[\033[38;5;15m\] $ "
 
-
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
-
-
-alias py='python3'
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
