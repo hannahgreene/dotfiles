@@ -1,0 +1,33 @@
+{
+    "python.testing.cwd": "${workspaceRoot}",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "${workspaceFolder}/.venv/bin/pytest",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.formatting.provider": "black",
+    "go.lintTool": "golangci-lint",
+    "go.inferGopath": false,
+    "[go]": {
+        "editor.formatOnSave": true
+      },
+    "go.useLanguageServer": true,
+    "go.testTimeout": "300s",
+    "go.coverOnSingleTest": true,
+    "go.buildTags": "redis",
+    "go.testTags": "redis",
+    "go.formatTool": "gofmt",
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "markdown.extension.toc.updateOnSave": false,
+    "go.coverageDecorator": {
+      "type": "gutter"
+    },
+    "go.coverageOptions": "showUncoveredCodeOnly",
+    "search.exclude": {
+      "**/*.code-search": true
+    }
+}
