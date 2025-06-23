@@ -1,7 +1,6 @@
 tap "aws/tap"
 tap "carvel-dev/carvel"
 tap "go-task/tap"
-tap "zendesk/zendesk", "git@github.com:zendesk/homebrew-zendesk.git"
 brew "aws-sam-cli"
 brew "python@3.12"
 brew "awscli"
